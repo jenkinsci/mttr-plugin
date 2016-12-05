@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
@@ -8,7 +7,7 @@
     </parent>
 
     <artifactId>mttr</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <packaging>hpi</packaging>
     <name>mean time to repair plugin</name>
     <description>statistics job builds mean time to repair</description>
@@ -44,7 +43,8 @@
         <connection>scm:git:ssh://github.com/jenkinsci/mttr-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/jenkinsci/mttr-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/mttr-plugin.git</url>
-    </scm>
+      <tag>mttr-1.2</tag>
+  </scm>
 
     <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
     <repositories>
