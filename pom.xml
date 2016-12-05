@@ -7,7 +7,7 @@
     </parent>
 
     <artifactId>mttr</artifactId>
-    <version>1.2</version>
+    <version>1.3-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>mean time to repair plugin</name>
     <description>statistics job builds mean time to repair</description>
@@ -43,7 +43,7 @@
         <connection>scm:git:ssh://github.com/jenkinsci/mttr-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/jenkinsci/mttr-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/mttr-plugin.git</url>
-      <tag>mttr-1.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
