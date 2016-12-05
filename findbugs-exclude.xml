@@ -1,0 +1,8 @@
+<FindBugsFilter>
+    <Match>
+        <Class name="~.+\.Messages" />
+    </Match>
+    <Match>
+        <Bug pattern="DM_BOXED_PRIMITIVE_FOR_PARSING" />
+    </Match>
+</FindBugsFilter>
