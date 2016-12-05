@@ -1,10 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.466</version>
-        <!-- which version of Jenkins is this plugin built against? -->
+        <version>2.17</version>
     </parent>
 
     <artifactId>mttr</artifactId>
@@ -14,6 +14,12 @@
     <description>statistics job builds mean time to repair</description>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/MTTR+Plugin</url>
 
+    <properties>
+        <!-- which version of Jenkins is this plugin built against? -->
+        <jenkins.version>1.580.1</jenkins.version>
+        <java.level>6</java.level>
+    </properties>
+
     <developers>
         <developer>
             <id>zhaozhiming</id>
@@ -22,10 +28,23 @@
         </developer>
     </developers>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <configuration>
+                    <excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
     <scm>
-        <connection>scm:git:ssh://github.com/zhaozhiming/mttr.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/zhaozhiming/mttr.git</developerConnection>
-        <url>https://github.com/zhaozhiming/mttr.git</url>
+        <connection>scm:git:ssh://github.com/jenkinsci/mttr-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/mttr-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/mttr-plugin.git</url>
     </scm>
 
     <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
